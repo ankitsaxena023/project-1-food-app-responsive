@@ -1,0 +1,94 @@
+.singleCardContainer {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #a79a2d;
+  text-align: center;
+  align-items: center;
+  padding: 4rem;
+  box-shadow: 1rem 1rem 1rem #000;
+  position: relative;
+  transform: rotateY(20deg) skewX(-2deg);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.singleCardContainer:hover {
+  transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
+  box-shadow: 2rem 2rem 2rem #000;
+}
+
+.singleCardContainer::before {
+  content: "";
+  height: 100%;
+  width: 1rem;
+  background-color: #817824;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  transform: skewY(45deg);
+  transform-origin: right;
+  box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+
+.singleCardContainer::after {
+  content: "";
+  height: 1rem;
+  width: 100%;
+  background-color: #8f8317;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  transform: skewX(45deg);
+  transform-origin: bottom;
+  box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+
+.cardImg {
+  width: 100%;
+}
+
+.cardHeading {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  color: #000;
+  margin: 2rem 0;
+  text-shadow: 0.15rem 0.15rem 0.15rem #000;
+}
+
+.cardBtn {
+  width: 70%;
+  background-color: #111;
+  color: #888;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  border: none;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  padding: 0.2rem 0;
+  cursor: pointer;
+  box-shadow: -0.2rem -0.2rem 0.2rem #000;
+}
+
+@media (max-width: 1250px) {
+  .singleCardContainer {
+    margin: 5rem auto;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .singleCardContainer {
+    margin: 5rem auto;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .singleCardContainer {
+    margin: 2rem auto;
+  }
+}

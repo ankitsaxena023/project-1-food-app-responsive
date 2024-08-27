@@ -1,0 +1,21 @@
+.cardContainer {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10rem 0;
+  gap: 5rem;
+}
+
+@media (max-width: 1000px) {
+  .cardContainer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    width: 50%;
+  }
+}

@@ -1,0 +1,131 @@
+.navContainer {
+  width: 100%;
+  height: 14rem;
+  background-color: #000;
+  position: fixed;
+  top: -13.5rem; /* Initially hidden */
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.2rem 0.2rem 0.2rem #000;
+  transition: top 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smooth transition */
+}
+
+.navContainer.visible {
+  top: 0; /* Show the navbar */
+}
+
+.navContainer.hidden {
+  top: -13.5rem; /* Hide the navbar */
+}
+
+.navbarLink {
+  color: #aaa;
+  margin: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.navbarLink:hover {
+  color: #fff;
+}
+
+.navbarLink i {
+  font-size: 7rem;
+}
+
+.navbarLink span {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.menu {
+  width: 4rem;
+  height: 6rem;
+  background-color: #000;
+  position: fixed;
+  left: 5rem;
+  border-radius: 30rem 30rem 15rem 15rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem #000, -0.1rem -0.1rem 0.1rem #000;
+  cursor: pointer;
+  z-index: 200; /* Ensure it's above the navbar */
+  top: 1.5rem;
+  transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smooth transition */
+}
+
+.menu.menu-open {
+  transform: translateY(
+    13.5rem
+  ); /* Moves the menu down when the navbar is visible */
+}
+
+.menu::before {
+  content: "";
+  width: 0.3rem;
+  height: 15rem;
+  background-color: #000;
+  position: absolute;
+  top: -15rem;
+  left: calc(50% - 0.15rem);
+  box-shadow: 0.1rem 0.1rem 0.1rem #000;
+}
+
+@media (max-width: 800px) {
+  .navbarLink {
+    margin: 2rem;
+  }
+
+  .navbarLink i {
+    font-size: 4rem;
+  }
+
+  .navbarLink span {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .menu {
+    left: 2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .menu {
+    left: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbarLink {
+    margin: 1rem;
+  }
+
+  .navbarLink i {
+    font-size: 3rem;
+  }
+
+  .navbarLink span {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbarLink {
+    margin: 1rem;
+  }
+
+  .navbarLink i {
+    font-size: 2.5rem;
+  }
+
+  .navbarLink span {
+    font-size: 1.5rem;
+  }
+}
